@@ -24,6 +24,15 @@ $(document).ready(function () {
         }, 1000);
     });
 
+    //hide navbar collaps on click on page
+    $(document).click(function (event) {
+        var click = $(event.target);
+        var _open = $(".navbar-collapse").hasClass("show");
+        if (_open === true && !click.hasClass("navbar-toggler")) {
+            $(".navbar-toggler").click();
+        }
+    });
+
     //Scroll to About
     $(".header .chevron-down").on("click", function() {
         $("html, body").animate({
