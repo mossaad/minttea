@@ -99,13 +99,18 @@ p{
     height: auto;
 }
 
-.header-image-div{
-    margin-left: 50px;
-    margin-right: 50px;
+.image-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 }
-.header-image{
-    margin-top: 250px;
-    width: 1035px;
+.single-image{
+    width: 500px;
+    padding: 0 30px 30px;
+    margin: 300px 0 0px 50px;
 }
 
 .chevron-down{
@@ -140,22 +145,69 @@ p{
     color: #152e72
 }
 @media(max-width: 1199px){
-    .header-image{
-        margin-top: 450px;
+    .single-image{
+        width: 465px;
+        padding: 0px 30px 30px;
+        margin: 300px 0 0px 0px;
     }
 }
 @media(max-width: 991px){
-    .header-image{
-        margin-top: 250px;
-        width: 1035px;
+    .single-image{
+        width: 345px;
     }
 }
 @media(max-width: 776px){
-    .header-image{
-        margin-top: 260px;
-        width: 1035px;
+    .single-image{
+        width: 350px;
+        padding: 0 30px 30px;
+        margin: 120px 20px -105px 15px;
     }
 }
+
+/*Galaxy and iphones*/
+@media(max-width: 768px){
+    .single-image{
+        width: 400px;
+        padding: 0 30px 30px;
+        margin: 120px 20px -105px 15px;
+    }
+}
+
+/* ipad */
+@media(width: 768px){
+    .single-image{
+        width: 450px;
+        padding: 0 30px 30px;
+        margin: 165px 20px -105px 15px;
+    }
+}
+
+/*surface due*/
+@media(width: 450px){
+    .single-image{
+        width: 310px;
+        padding: 0 30px 30px;
+        margin: 95px 20px -105px 15px;
+    }
+}
+
+/* ipad pro */
+@media only screen 
+    and (min-width: 1024px) 
+    and (max-height: 1366px) 
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+        .single-image{
+            width: 400px;
+            padding: 0 30px 30px;
+            margin: 485px 20px -105px 15px;
+        }
+}
+
+/*galaxy flod*/
+@media(width: 280px){
+
+}
+
 /*end header*/
 
 
@@ -405,6 +457,13 @@ p{
     }
     .s-main-content{
         margin-top: 0; 
+    }
+}
+
+/*galaxy flod*/
+@media(width: 280px){
+    .service .s-content p {
+        font-size: 11px;
     }
 }
 /*End Services*/
