@@ -76,5 +76,40 @@ $(document).ready(function () {
         pagination: {
             el: '.swiper-pagination',
         },
-    });    
+    });
+
+
+    //stop independence video on modale hide
+    $('#independence').on('hide.bs.modal', () => {
+        $('#independence-player').attr('src', '');
+        $('#independence-player').attr('src', 'https://www.youtube.com/embed/FzFR1E97OP4');
+    });
+
+    //stop independence video on page hidden
+    document.addEventListener("visibilitychange", function() {
+        // console.log(document.visibilityState);
+        // console.log(document.hidden);
+        if(document.hidden){
+            $('#independence-player').attr('src', '');
+        }else{
+            $('#independence-player').attr('src', 'https://www.youtube.com/embed/FzFR1E97OP4');
+        }
+    });
+
+    //stop forest video on modale hide
+    $('#forest').on('hide.bs.modal', () => {
+        $('#forest-player').attr('src', '');
+        $('#forest-player').attr('src', 'https://www.youtube.com/embed/JW5KRm0XakE');
+    });
+
+    //stop forest video on page hidden
+    document.addEventListener("visibilitychange", function() {
+        // console.log(document.visibilityState);
+        // console.log(document.hidden);
+        if(document.hidden){
+            $('#forest-player').attr('src', '');
+        }else{
+            $('#forest-player').attr('src', 'https://www.youtube.com/embed/JW5KRm0XakE');
+        }
+    });
 });

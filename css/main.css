@@ -305,7 +305,7 @@ p{
 .modal-xl {
     max-width: 1140px;
 }
-.video-container{
+/* .video-container{
     position:relative;
 	padding-bottom:56.25%;
 	padding-top:30px;
@@ -318,7 +318,7 @@ p{
 	left:0;
 	width:100%;
 	height:100%;
-}
+} */
 .works-h3{
     display: block !important;
     text-transform: uppercase;
@@ -465,6 +465,20 @@ p{
     .service .s-content p {
         font-size: 11px;
     }
+}
+
+.carousel-control-prev{
+    top: 50%;
+    bottom: 50%;
+}
+.carousel-control-next{
+    top: 50%;
+    bottom: 50%;
+}
+.fa-angle-left,
+.fa-angle-right{
+    font-size: 35px;
+    color: #1769ff;
 }
 /*End Services*/
 
