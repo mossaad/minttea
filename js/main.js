@@ -112,4 +112,38 @@ $(document).ready(function () {
             $('#forest-player').attr('src', 'https://www.youtube.com/embed/JW5KRm0XakE');
         }
     });
+
+    //Pause carousal on video
+    $('#independence').on('show.bs.modal', ()=> {
+        console.log('yes')
+        $('#independenceCaptions').on('slide.bs.carousel', function onSlide (ev) {
+            var id = ev.relatedTarget.id;
+            switch (id) {
+                case "independence-video":
+                console.log('video')
+                $("#independenceCaptions").carousel("pause");
+                break;
+            //   case "2":
+            //     // do something the id is 2
+            //     break;
+            //   case "3":
+            //     // do something the id is 3
+            //     break;
+            //   default:
+            //     //the id is none of the above
+            }
+        });
+    });
+
+    $('#forest').on('show.bs.modal', ()=> {
+        $('#forestCaptions').on('slide.bs.carousel', function onSlide (ev) {
+            var id = ev.relatedTarget.id;
+            switch (id) {
+                case "forest-video":
+                $("#forestCaptions").carousel("pause");
+                break;
+            }
+        });
+    });
+
 });
